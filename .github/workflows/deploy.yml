@@ -24,6 +24,9 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      # Belt-and-braces: never ship a build whose tests fail, even on a
+      # direct push that bypassed the PR gate.
+      - run: npm run test
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
