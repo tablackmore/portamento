@@ -19,7 +19,7 @@ vanilla TS + Vite app deployed to GitHub Pages.
   `required_linear_history`.
 - **PR titles must be Conventional Commits** (`feat(core): …`, `fix(web): …`,
   `ci: …`, `docs: …`). The squash commit takes the PR title as its message, so
-  the title *is* the history — CI rejects non-conforming titles.
+  the title _is_ the history — CI rejects non-conforming titles.
 - Required checks before merge: `check` (lint, format, typecheck, tests with
   coverage thresholds, build) and `lint-title`. Branches must be up to date
   with `main` before merging.
