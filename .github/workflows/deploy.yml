@@ -28,7 +28,7 @@ jobs:
       # direct push that bypassed the PR gate.
       - run: npm run test
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: packages/web/dist
 
