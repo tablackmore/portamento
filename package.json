@@ -18,9 +18,9 @@
     "typecheck": "npm run typecheck --workspaces --if-present"
   },
   "devDependencies": {
-    "@eslint/js": "^9.14.0",
+    "@eslint/js": "^10.0.1",
     "@types/node": "^26.3.0",
-    "eslint": "^9.14.0",
+    "eslint": "^10.9.0",
     "prettier": "^3.3.3",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.13.0"
