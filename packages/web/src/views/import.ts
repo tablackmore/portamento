@@ -58,8 +58,6 @@ function showSourcePicker(app: App, body: HTMLElement): void {
       'Open link',
     ),
   );
-  linkRow.style.alignItems = 'stretch';
-  linkInput.style.flex = '1';
 
   body.append(
     h('h2', { text: 'Import' }),

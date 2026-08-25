@@ -33,6 +33,11 @@
 
 html {
   color-scheme: dark;
+  /* iOS Safari only honors sideways-scroll prevention on the root element,
+     and its automatic text inflation can widen layouts desktop engines don't. */
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -44,6 +49,9 @@ body {
   font-size: 16px;
   line-height: 1.55;
   min-height: 100dvh;
+  /* Nothing should ever scroll the page sideways; wide content must manage
+     its own overflow. `clip` forbids programmatic sideways scroll too. */
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -302,6 +310,15 @@ body::before {
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
+}
+
+/* Inputs sharing a row with a button (redirect URI + Copy, share link +
+   Open): grow to fill, but shrink below their intrinsic ~20ch minimum
+   instead of pushing the row wider than a phone screen. */
+.btn-row input {
+  flex: 1 1 12rem;
+  width: auto;
+  min-width: 0;
 }
 
 .dot {
